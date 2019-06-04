@@ -3,9 +3,17 @@
 <JUCERPROJECT id="k01auy" name="CCDelay" projectType="audioplug" jucerVersion="5.4.3"
               version="0.1.0" companyName="Artisanal Computing">
   <MAINGROUP id="YSJoEH" name="CCDelay">
+    <GROUP id="{EE3279A9-4353-70FB-CFB1-36936869BA97}" name="Panels">
+      <FILE id="VpXja9" name="CCMainPanel.cpp" compile="1" resource="0" file="Source/CCMainPanel.cpp"/>
+      <FILE id="vN712E" name="CCMainPanel.h" compile="0" resource="0" file="Source/CCMainPanel.h"/>
+      <FILE id="bwFDia" name="CCPanelBase.cpp" compile="1" resource="0" file="Source/CCPanelBase.cpp"/>
+      <FILE id="dpvlJV" name="CCPanelBase.h" compile="0" resource="0" file="Source/CCPanelBase.h"/>
+    </GROUP>
     <GROUP id="{425A83EC-BE7F-AFD5-BBE4-8DF6E9831BFE}" name="Helpers">
       <FILE id="B0tezo" name="CCAudioHelpers.h" compile="0" resource="0"
             file="Source/CCAudioHelpers.h"/>
+      <FILE id="EjKQF2" name="CCInterfaceDefines.h" compile="0" resource="0"
+            file="Source/CCInterfaceDefines.h"/>
       <FILE id="bWwQvN" name="CCParameters.h" compile="0" resource="0" file="Source/CCParameters.h"/>
     </GROUP>
     <GROUP id="{BFC66DDE-1BC1-98AB-1F83-4E969199B89B}" name="DSP">
