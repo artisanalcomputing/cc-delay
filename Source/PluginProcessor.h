@@ -13,6 +13,8 @@
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "CCDelay.h"
 
+#include "CCParameters.h"
+
 //==============================================================================
 /**
 */
@@ -56,6 +58,21 @@ public:
     void getStateInformation (MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
 
+    AudioProcessorValueTreeState parameters;
+    
+    AudioProcessorValueTreeState::ParameterLayout createParameterLayout()
+    {
+        std::vector<std::unique_ptr<AudioParameterFloat>> params;
+        
+        for(int i = 0; i < kParameter_TotalNumParameters; i++){
+            params.push_back(std::make_unique<AudioParameterFloat>(
+                                                                   CCParameterID[i],
+                                                                   CCParameterLabel[i],
+                                                                   NormalisableRange<float>(0.0f, 1.0f),
+                                                                   0.5f));
+        }
+        return {params.begin(), params.end()};
+    }
 private:
     /** internal */
     void initializeDSP();

@@ -21,9 +21,14 @@ CcdelayAudioProcessor::CcdelayAudioProcessor()
                       #endif
                        .withOutput ("Output", AudioChannelSet::stereo(), true)
                      #endif
-                       )
+                       ),
+           parameters(*this,
+               nullptr,
+               juce::Identifier("CCDelay"),
+               createParameterLayout())
 #endif
 {
+    initializeDSP();
 }
 
 CcdelayAudioProcessor::~CcdelayAudioProcessor()
@@ -161,6 +166,16 @@ void CcdelayAudioProcessor::processBlock (AudioBuffer<float>& buffer, MidiBuffer
         auto* channelData = buffer.getWritePointer (channel);
 
         // ..do something to the data...
+        float delayTime = *parameters.getRawParameterValue(CCParameterID[kParameter_DelayTime]);
+        float feedback = *parameters.getRawParameterValue(CCParameterID[kParameter_DelayFeedback]);
+        float wetDry = *parameters.getRawParameterValue(CCParameterID[kParameter_DelayWetDry]);
+        
+        mDelay[channel]->process(channelData,
+                                 delayTime,
+                                 feedback,
+                                 wetDry,
+                                 channelData,
+                                 buffer.getNumSamples());
     }
 }
 

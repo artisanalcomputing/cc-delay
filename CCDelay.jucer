@@ -6,6 +6,7 @@
     <GROUP id="{425A83EC-BE7F-AFD5-BBE4-8DF6E9831BFE}" name="Helpers">
       <FILE id="B0tezo" name="CCAudioHelpers.h" compile="0" resource="0"
             file="Source/CCAudioHelpers.h"/>
+      <FILE id="bWwQvN" name="CCParameters.h" compile="0" resource="0" file="Source/CCParameters.h"/>
     </GROUP>
     <GROUP id="{BFC66DDE-1BC1-98AB-1F83-4E969199B89B}" name="DSP">
       <FILE id="OOQJUh" name="CCDelay.cpp" compile="1" resource="0" file="Source/CCDelay.cpp"/>

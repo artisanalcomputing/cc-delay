@@ -46,25 +46,16 @@ void  CCDelay::process(float* inAudio,
                         float inTime,
                         float inFeedback,
                         float inWetDry,
-                        float inType,
-                        float* inModulationBuffer,
                         float* outAudio,
                         int inNumSamplesToRender)
 {
     const float wet = inWetDry;
     const float dry = 1.0f - wet;
-    const float feedbackMapped =
-    (inType==kCCDelayType_Delay) ? jmap(inFeedback, 0.0f, 1.0f, 0.0f, 1.2f) : 0.f;
+    const float feedbackMapped = jmap(inFeedback, 0.0f, 1.0f, 0.0f, 1.2f);
     
     for(int i = 0; i < inNumSamplesToRender; i++){
         
-        if((int)inType == kCCDelayType_Delay)
-        {
-            mTimeSmoothed = mTimeSmoothed - kParameterSmoothingCoeff_Fine*(mTimeSmoothed-inTime);
-        } else {
-            const double delayTimeModulation = (0.003 + (0.002 * inModulationBuffer[i]));
-            mTimeSmoothed = mTimeSmoothed - kParameterSmoothingCoeff_Fine*(mTimeSmoothed-(delayTimeModulation));
-        }
+        mTimeSmoothed = mTimeSmoothed - kParameterSmoothingCoeff_Fine*(mTimeSmoothed-inTime);
         
         const double delayTimeInSamples = (mTimeSmoothed * mSampleRate);
         const double sample = getInterpolatedSample(delayTimeInSamples);
