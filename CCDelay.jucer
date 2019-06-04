@@ -3,6 +3,14 @@
 <JUCERPROJECT id="k01auy" name="CCDelay" projectType="audioplug" jucerVersion="5.4.3"
               version="0.1.0" companyName="Artisanal Computing">
   <MAINGROUP id="YSJoEH" name="CCDelay">
+    <GROUP id="{425A83EC-BE7F-AFD5-BBE4-8DF6E9831BFE}" name="Helpers">
+      <FILE id="B0tezo" name="CCAudioHelpers.h" compile="0" resource="0"
+            file="Source/CCAudioHelpers.h"/>
+    </GROUP>
+    <GROUP id="{BFC66DDE-1BC1-98AB-1F83-4E969199B89B}" name="DSP">
+      <FILE id="OOQJUh" name="CCDelay.cpp" compile="1" resource="0" file="Source/CCDelay.cpp"/>
+      <FILE id="eITwTl" name="CCDelay.h" compile="0" resource="0" file="Source/CCDelay.h"/>
+    </GROUP>
     <GROUP id="{F6DE0866-6097-0110-7DD1-95F96558645F}" name="Source">
       <FILE id="Vr1jkd" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>

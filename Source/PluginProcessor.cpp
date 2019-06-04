@@ -97,12 +97,18 @@ void CcdelayAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBloc
 {
     // Use this method as the place to do any pre-playback
     // initialisation that you need..
+    for(int i = 0; i < 2; i++){
+        mDelay[i]->setSampleRate(sampleRate);
+    }
 }
 
 void CcdelayAudioProcessor::releaseResources()
 {
     // When playback stops, you can use this as an opportunity to free up any
     // spare memory, etc.
+    for(int i = 0; i < 2; i++){
+        mDelay[i]->reset();
+    }
 }
 
 #ifndef JucePlugin_PreferredChannelConfigurations
@@ -181,6 +187,13 @@ void CcdelayAudioProcessor::setStateInformation (const void* data, int sizeInByt
 {
     // You should use this method to restore your parameters from this memory block,
     // whose contents will have been created by the getStateInformation() call.
+}
+
+void CcdelayAudioProcessor::initializeDSP()
+{
+    for(int i = 0; i < 2; i++){
+        mDelay[i].reset(new CCDelay());
+    }
 }
 
 //==============================================================================
