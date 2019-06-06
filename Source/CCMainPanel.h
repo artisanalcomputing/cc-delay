@@ -12,6 +12,9 @@
 
 #include "CCPanelBase.h"
 #include "PluginProcessor.h"
+#include "CCDelayTimePanel.h"
+#include "CCDelayFeedbackPanel.h"
+#include "CCDelayMixPanel.h"
 
 class CCMainPanel
 : public CCPanelBase
@@ -20,9 +23,7 @@ public:
     CCMainPanel(CcdelayAudioProcessor* inProcessor);
     ~CCMainPanel();
 private:
-    
-//    std::unique_ptr<KAPTopPanel> mTopPanel;
-//    std::unique_ptr<KAPGainPanel> mInputGainPanel;
-//    std::unique_ptr<KAPGainPanel> mOutputGainPanel;
-//    std::unique_ptr<KAPCenterPanel> mCenterPanel;
+    std::unique_ptr<CCDelayTimePanel> mDelayTimePanel;
+    std::unique_ptr<CCDelayFeedbackPanel> mDelayFeedbackPanel;
+    std::unique_ptr<CCDelayMixPanel> mDelayMixPanel;
 };

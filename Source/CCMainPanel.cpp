@@ -14,6 +14,21 @@ CCMainPanel::CCMainPanel(CcdelayAudioProcessor* inProcessor)
 : CCPanelBase(inProcessor)
 {
     setSize(MAIN_PANEL_WIDTH, MAIN_PANEL_HEIGHT);
+    
+    mDelayTimePanel.reset(new CCDelayTimePanel(inProcessor));
+    mDelayTimePanel->setTopLeftPosition(10, 100);
+    mDelayTimePanel->setParameterID(kParameter_DelayTime);
+    addAndMakeVisible(*mDelayTimePanel);
+    
+    mDelayFeedbackPanel.reset(new CCDelayFeedbackPanel(inProcessor));
+    mDelayFeedbackPanel->setTopLeftPosition(200, 100);
+    mDelayFeedbackPanel->setParameterID(kParameter_DelayFeedback);
+    addAndMakeVisible(*mDelayFeedbackPanel);
+    
+    mDelayMixPanel.reset(new CCDelayMixPanel(inProcessor));
+    mDelayMixPanel->setTopLeftPosition(380, 100);
+    mDelayMixPanel->setParameterID(kParameter_DelayWetDry);
+    addAndMakeVisible(*mDelayMixPanel);
 }
 
 CCMainPanel::~CCMainPanel()
