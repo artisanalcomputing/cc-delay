@@ -37,6 +37,8 @@ private:
     float mTimeSmoothed;
     
     int mDelayIndex;
+    
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(CCDelay);
 };
 
 

@@ -24,4 +24,6 @@ public:
     void setParameterID(int inParameterID);
 private:
     std::unique_ptr<Slider> mSlider;
+    
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(CCDelayTimePanel);
 };

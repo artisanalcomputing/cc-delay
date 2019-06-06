@@ -26,4 +26,6 @@ private:
     std::unique_ptr<CCDelayTimePanel> mDelayTimePanel;
     std::unique_ptr<CCDelayFeedbackPanel> mDelayFeedbackPanel;
     std::unique_ptr<CCDelayMixPanel> mDelayMixPanel;
+    
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(CCMainPanel);
 };
