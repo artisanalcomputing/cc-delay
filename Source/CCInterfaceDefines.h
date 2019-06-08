@@ -16,8 +16,8 @@
 #define MAIN_PANEL_WIDTH    500
 #define MAIN_PANEL_HEIGHT 300
 
-#define PARAM_PANEL_WIDTH 100
-#define PARAM_PANEL_HEIGHT 100
+#define PARAM_PANEL_WIDTH 150
+#define PARAM_PANEL_HEIGHT 150
 
 const Colour CCColour_1 = Colour(105, 105, 105);
 const Colour CCColour_2 = Colour(0, 0, 0).withAlpha(0.0f);

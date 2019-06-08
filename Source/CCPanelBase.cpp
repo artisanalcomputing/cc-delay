@@ -20,7 +20,7 @@ CCPanelBase::CCPanelBase(CcdelayAudioProcessor* inProcessor)
 
 CCPanelBase::~CCPanelBase()
 {
-    
+    mProcessor = nullptr;
 }
 
 void CCPanelBase::mouseEnter(const MouseEvent& event)
