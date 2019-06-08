@@ -20,10 +20,15 @@ CcdelayAudioProcessorEditor::CcdelayAudioProcessorEditor (CcdelayAudioProcessor&
     setSize (MAIN_PANEL_WIDTH, MAIN_PANEL_HEIGHT);
     mMainPanel.reset(new CCMainPanel(&processor));
     addAndMakeVisible(*mMainPanel);
+    
+    mLookAndFeel.reset(new CCLookAndFeel());
+    setLookAndFeel(&*mLookAndFeel);
+    LookAndFeel::setDefaultLookAndFeel(&*mLookAndFeel);
 }
 
 CcdelayAudioProcessorEditor::~CcdelayAudioProcessorEditor()
 {
+    setLookAndFeel(nullptr);
 }
 
 //==============================================================================

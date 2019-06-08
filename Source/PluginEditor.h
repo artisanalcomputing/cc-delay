@@ -14,6 +14,7 @@
 #include "PluginProcessor.h"
 #include "CCMainPanel.h"
 #include "CCInterfaceDefines.h"
+#include "CCLookAndFeel.h"
 
 //==============================================================================
 /**
@@ -32,6 +33,8 @@ private:
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
     CcdelayAudioProcessor& processor;
+    
+    std::unique_ptr<CCLookAndFeel> mLookAndFeel;
     std::unique_ptr<CCMainPanel> mMainPanel;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (CcdelayAudioProcessorEditor)

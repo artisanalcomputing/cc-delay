@@ -34,6 +34,7 @@
             file="Source/CCHelperFunctions.h"/>
       <FILE id="EjKQF2" name="CCInterfaceDefines.h" compile="0" resource="0"
             file="Source/CCInterfaceDefines.h"/>
+      <FILE id="HQXleA" name="CCLookAndFeel.h" compile="0" resource="0" file="Source/CCLookAndFeel.h"/>
       <FILE id="bWwQvN" name="CCParameters.h" compile="0" resource="0" file="Source/CCParameters.h"/>
     </GROUP>
     <GROUP id="{BFC66DDE-1BC1-98AB-1F83-4E969199B89B}" name="DSP">
