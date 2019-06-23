@@ -20,14 +20,14 @@ enum CCParameter
 
 static String CCParameterLabel [kParameter_TotalNumParameters] =
 {
-    "Time",
-    "Feedback",
-    "Wet Dry"
+    "DELAY",
+    "GYIT",
+    "MIX"
 };
 
 static String CCParameterID [kParameter_TotalNumParameters] =
 {
-    "Time",
-    "Feedback",
-    "WetDry"
+    "DELAY",
+    "GYIT",
+    "MIX"
 };
