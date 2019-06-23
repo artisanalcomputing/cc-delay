@@ -39,5 +39,5 @@ void CCPanelBase::paint (Graphics &g)
     g.fillAll();
     
     g.setColour(Colours::whitesmoke);
-    g.drawRoundedRectangle(0, 0, getWidth(), getHeight(), 4, 2);
+    g.drawRoundedRectangle(0, 0, getWidth(), getHeight(), 10, 8);
 }

@@ -48,7 +48,7 @@ public:
         g.drawEllipse (rx, ry, rw, rw, 1.0f);
         
         Path p;
-        auto pointerLength = radius * 0.33f;
+        auto pointerLength = radius * 0.66f;
         auto pointerThickness = 2.0f;
         p.addRectangle (-pointerThickness * 0.5f, -radius, pointerThickness, pointerLength);
         p.applyTransform (AffineTransform::rotation (angle).translated (centreX, centreY));
