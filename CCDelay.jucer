@@ -3,6 +3,9 @@
 <JUCERPROJECT id="k01auy" name="CCDelay" projectType="audioplug" jucerVersion="5.4.3"
               version="0.1.0" companyName="Artisanal Computing">
   <MAINGROUP id="YSJoEH" name="CCDelay">
+    <GROUP id="{4A6A0368-8702-811F-71FC-2F72E2EDFADE}" name="Assets">
+      <FILE id="kPND5b" name="bumper.jpg" compile="0" resource="1" file="../Desktop/bumper.jpg"/>
+    </GROUP>
     <GROUP id="{8EB9475D-55C9-D32F-FE1B-0473B0A52F78}" name="Parameter Control">
       <FILE id="n9L5mM" name="CCParameterSlider.cpp" compile="1" resource="0"
             file="Source/CCParameterSlider.cpp"/>
@@ -22,6 +25,9 @@
             file="Source/CCDelayTimePanel.cpp"/>
       <FILE id="DLVMBg" name="CCDelayTimePanel.h" compile="0" resource="0"
             file="Source/CCDelayTimePanel.h"/>
+      <FILE id="KR4MQ4" name="CCImagePanel.cpp" compile="1" resource="0"
+            file="Source/CCImagePanel.cpp"/>
+      <FILE id="EjBMjT" name="CCImagePanel.h" compile="0" resource="0" file="Source/CCImagePanel.h"/>
       <FILE id="VpXja9" name="CCMainPanel.cpp" compile="1" resource="0" file="Source/CCMainPanel.cpp"/>
       <FILE id="vN712E" name="CCMainPanel.h" compile="0" resource="0" file="Source/CCMainPanel.h"/>
       <FILE id="bwFDia" name="CCPanelBase.cpp" compile="1" resource="0" file="Source/CCPanelBase.cpp"/>
